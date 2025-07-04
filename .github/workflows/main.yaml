@@ -25,6 +25,9 @@ jobs:
         with:
           # Assuming you have a SonarCloud account and the necessary environment variables set
           projectBaseDir: .
+          args: >
+            -Dsonar.projectKey=Port-Project
+            -Dsonar.projectName=Port-Project
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
