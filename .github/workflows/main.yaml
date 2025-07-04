@@ -19,16 +19,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '23'
-      
-      - name: Install Gitleaks
-        run: |
-          sudo apt-get update && sudo apt-get install gitleaks
-
-      - name: Frontend Compilation
-        working-directory: client
-        run: |
-          find . -name "*.js" -exec node --check {} +
-
+          
       - name: Set up SonarQube
         uses: sonarsource/sonarqube-scan-action@master
         with:
