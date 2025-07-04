@@ -7,6 +7,7 @@ COPY . .
 RUN npm run build
 
 # Production stage
+#alpha
 FROM node:18-alpine AS production
 WORKDIR /app
 COPY --from=builder /app/package*.json ./
